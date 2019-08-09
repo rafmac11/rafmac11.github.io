@@ -1,0 +1,1068 @@
+{
+  "settings": {
+    "name": "Law",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "lawyerm4",
+      "title": "LawyerM4",
+      "styling": {
+        "primaryColor": "#444444",
+        "secondaryColor": "#FFA200",
+        "successColor": "#0F7699",
+        "infoColor": "#82786E",
+        "warningColor": "#879A9F",
+        "dangerColor": "#767676",
+        "mainFont": "Muli",
+        "display1Font": "Muli",
+        "display1Size": 3.75,
+        "display2Font": "Muli",
+        "display2Size": 2,
+        "display5Font": "Kaushan Script",
+        "display5Size": 2,
+        "display7Font": "Muli",
+        "display7Size": 1,
+        "display4Font": "Muli",
+        "display4Size": 0.8,
+        "isRoundedButtons": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      },
+      "additionalSetColors": []
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "4.10.7",
+    "siteFonts": [],
+    "uniqCompNum": 15,
+    "versionPublish": "4.10.7",
+    "screenshot": "screenshot.png"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Home",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            ".nav-item:focus, .nav-link:focus": {
+              "outline": "none"
+            },
+            ".navbar": {
+              "min-height": "77px",
+              "transition": "all .3s",
+              "background": "@menuBgColor",
+              "& when (@transparent)": {
+                "background": "none"
+              },
+              "&.opened": {
+                "transition": "all .3s",
+                "background": "@menuBgColor !important"
+              },
+              ".dropdown-item": {
+                "padding": ".25rem 1.5rem"
+              },
+              ".navbar-collapse": {
+                "-webkit-justify-content": "flex-end",
+                "justify-content": "flex-end",
+                "z-index": "1",
+                "& when not (@showItems)": {
+                  "display": "none !important"
+                }
+              },
+              "&.collapsed": {
+                "&.opened": {
+                  ".dropdown-menu": {
+                    "top": "0"
+                  },
+                  "@media (min-width: 992px)": {
+                    "&:not(.navbar-short) .navbar-collapse when (@showLogo)": {
+                      "max-height": "~\"calc(98.5vh - @{logoSize}rem)\""
+                    }
+                  }
+                },
+                ".dropdown-menu": {
+                  "background": "transparent !important",
+                  ".dropdown-submenu": {
+                    "left": "0 !important"
+                  },
+                  ".dropdown-item:after": {
+                    "right": "auto"
+                  },
+                  ".dropdown-toggle[data-toggle=\"dropdown-submenu\"]:after": {
+                    "margin-left": ".25rem",
+                    "border-top": "0.35em solid",
+                    "border-right": "0.35em solid transparent",
+                    "border-left": "0.35em solid transparent",
+                    "border-bottom": "0",
+                    "top": "55%"
+                  }
+                },
+                "ul.navbar-nav": {
+                  "li": {
+                    "margin": "auto"
+                  }
+                },
+                ".dropdown-menu .dropdown-item": {
+                  "padding": ".25rem 1.5rem",
+                  "text-align": "center"
+                },
+                ".icons-menu": {
+                  "padding-left": "0",
+                  "padding-top": ".5rem",
+                  "padding-bottom": ".5rem"
+                }
+              },
+              "@media (max-width: 991px)": {
+                "&.opened": {
+                  ".dropdown-menu": {
+                    "top": "0"
+                  }
+                },
+                ".dropdown-menu": {
+                  "background": "transparent !important",
+                  ".dropdown-submenu": {
+                    "left": "0 !important"
+                  },
+                  ".dropdown-item:after": {
+                    "right": "auto"
+                  },
+                  ".dropdown-toggle[data-toggle=\"dropdown-submenu\"]:after": {
+                    "margin-left": ".25rem",
+                    "border-top": "0.35em solid",
+                    "border-right": "0.35em solid transparent",
+                    "border-left": "0.35em solid transparent",
+                    "border-bottom": "0",
+                    "top": "55%"
+                  }
+                },
+                ".navbar-logo": {
+                  "img": {
+                    "height": "3.8rem !important"
+                  }
+                },
+                "ul.navbar-nav": {
+                  "li": {
+                    "margin": "auto"
+                  }
+                },
+                ".dropdown-menu .dropdown-item": {
+                  "padding": ".25rem 1.5rem",
+                  "text-align": "center"
+                },
+                ".navbar-brand": {
+                  "-webkit-flex-shrink": "initial",
+                  "flex-shrink": "initial",
+                  "word-break": "break-word"
+                },
+                ".navbar-toggler": {},
+                ".icons-menu": {
+                  "padding-left": "0",
+                  "padding-top": ".5rem",
+                  "padding-bottom": ".5rem"
+                }
+              },
+              "&.navbar-short": {
+                "background": "@menuBgColor !important",
+                "min-height": "60px",
+                ".navbar-logo": {
+                  "img": {
+                    "height": "3rem !important"
+                  }
+                },
+                ".navbar-brand": {
+                  "padding": "0"
+                }
+              }
+            },
+            ".navbar-brand": {
+              "display": "flex",
+              "-webkit-flex-shrink": "0",
+              "flex-shrink": "0",
+              "-webkit-align-items": "center",
+              "align-items": "center",
+              "margin-right": "0",
+              "padding": "0",
+              "transition": "all .3s",
+              "word-break": "break-word",
+              "z-index": "1",
+              ".navbar-caption": {
+                "line-height": "inherit !important"
+              },
+              ".navbar-logo a": {
+                "outline": "none"
+              }
+            },
+            ".dropdown-item.active,.dropdown-item:active": {
+              "background-color": "transparent"
+            },
+            ".navbar-expand-lg .navbar-nav .nav-link": {
+              "padding": "0"
+            },
+            ".nav-dropdown .link.dropdown-toggle": {
+              "margin-right": "1.667em",
+              "&[aria-expanded=\"true\"]": {
+                "margin-right": "0",
+                "padding": "0.667em 1.667em"
+              }
+            },
+            ".navbar.navbar-expand-lg .dropdown": {
+              ".dropdown-menu": {
+                "background": "@menuBgColor",
+                ".dropdown-submenu": {
+                  "margin": "0",
+                  "left": "100%"
+                }
+              }
+            },
+            ".navbar .dropdown.open > .dropdown-menu": {
+              "display": "block"
+            },
+            "ul.navbar-nav": {
+              "-webkit-flex-wrap": "wrap",
+              "flex-wrap": "wrap"
+            },
+            ".navbar-buttons": {
+              "text-align": "center"
+            },
+            "button.navbar-toggler": {
+              "outline": "none",
+              "width": "31px",
+              "height": "20px",
+              "cursor": "pointer",
+              "transition": "all .2s",
+              "position": "relative",
+              "-webkit-align-self": "center",
+              "align-self": "center",
+              ".hamburger span": {
+                "position": "absolute",
+                "right": "0",
+                "width": "30px",
+                "height": "2px",
+                "border-right": "5px",
+                "background-color": "@hamburgerColor",
+                "&:nth-child(1)": {
+                  "top": "0",
+                  "transition": "all .2s"
+                },
+                "&:nth-child(2)": {
+                  "top": "8px",
+                  "transition": "all .15s"
+                },
+                "&:nth-child(3)": {
+                  "top": "8px",
+                  "transition": "all .15s"
+                },
+                "&:nth-child(4)": {
+                  "top": "16px",
+                  "transition": "all .2s"
+                }
+              }
+            },
+            "nav.opened .hamburger span": {
+              "&:nth-child(1)": {
+                "top": "8px",
+                "width": "0",
+                "opacity": "0",
+                "right": "50%",
+                "transition": "all .2s"
+              },
+              "&:nth-child(2)": {
+                "-webkit-transform": "rotate(45deg)",
+                "transform": "rotate(45deg)",
+                "transition": "all .25s"
+              },
+              "&:nth-child(3)": {
+                "-webkit-transform": "rotate(-45deg)",
+                "transform": "rotate(-45deg)",
+                "transition": "all .25s"
+              },
+              "&:nth-child(4)": {
+                "top": "8px",
+                "width": "0",
+                "opacity": "0",
+                "right": "50%",
+                "transition": "all .2s"
+              }
+            },
+            ".navbar-dropdown": {
+              "padding": ".5rem 1rem",
+              "& when (@sticky)": {
+                "position": "fixed"
+              }
+            },
+            "a.nav-link": {
+              "display": "flex",
+              "-webkit-align-items": "center",
+              "align-items": "center",
+              "-webkit-justify-content": "center",
+              "justify-content": "center"
+            },
+            ".mbr-iconfont": {
+              "font-size": "1.5rem",
+              "padding-right": ".5rem"
+            },
+            ".icons-menu": {
+              "-webkit-flex-wrap": "wrap",
+              "flex-wrap": "wrap",
+              "display": "flex",
+              "-webkit-justify-content": "center",
+              "justify-content": "center",
+              "padding-left": "1rem",
+              "text-align": "center",
+              "span": {
+                "font-size": "20px",
+                "color": "#232323"
+              }
+            },
+            ".nav-link:hover, .dropdown-item:hover, .icons-menu .mbr-iconfont:hover": {
+              "color": "@itemsHoverColor !important"
+            }
+          },
+          "_name": "menu2",
+          "_customHTML": "<section class=\"menu\" group=\"Menu\" plugins=\"DropDown, TouchSwipe\" always-top=\"\" global=\"\" once=\"menu\" not-draggable=\"\" position-absolute=\"\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\">\n        <input type=\"range\" title=\"Logo Size\" inline=\"\" name=\"logoSize\" min=\"3.8\" max=\"8\" step=\"0.1\" value=\"3.8\" condition=\"showLogo\">\n        <input type=\"checkbox\" title=\"Show Brand Name\" name=\"showBrand\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Menu Items\" name=\"showItems\" checked=\"\">\n        <input type=\"color\" title=\"Items Hover Color\" name=\"itemsHoverColor\" value=\"#c1c1c1\" condition=\"showItems\">\n        <input type=\"checkbox\" title=\"Show Icons\" name=\"showIcons\" checked=\"\" condition=\"showItems\">\n        <select title=\"Social Icons\" name=\"iconsAmount\" condition=\"showIcons &amp;&amp; showItems\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\" selected=\"\">3</option>\n            <option value=\"4\">4</option>\n            <option value=\"5\">5</option>\n            <option value=\"6\">6</option>\n        </select>\n        <input type=\"checkbox\" title=\"Show Button(s)\" name=\"showButtons\" condition=\"showItems\">\n        <input type=\"checkbox\" title=\"Sticky\" name=\"sticky\" checked=\"\">\n        <input type=\"checkbox\" title=\"Collapsed\" name=\"collapsed\">\n        <input type=\"checkbox\" title=\"Transparent\" name=\"transparent\">\n        <input type=\"color\" title=\"Hamburger Color\" name=\"hamburgerColor\" value=\"#232323\">\n        <input type=\"color\" title=\"Background Color\" name=\"menuBgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    \n\n    <nav class=\"navbar navbar-dropdown\" mbr-class=\"{'navbar-fixed-top':sticky,\n                     'navbar-expand-lg':!collapsed,\n                     'collapsed':collapsed}\">\n        <div class=\"navbar-brand\">\n            <span mbr-if=\"showLogo\" class=\"navbar-logo\">\n                <a href=\"https://mobirise.com\">\n                    <img src=\"../_images/logo2.png\" alt=\"Mobirise\" mbr-style=\"{'height': logoSize + 'rem'}\">\n                </a>\n            </span>\n            <span mbr-if=\"showBrand\" mbr-buttons=\"\" mbr-theme-style=\"display-5\" class=\"navbar-caption-wrap\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove\">\n                <a class=\"navbar-caption text-black\" data-app-selector=\".navbar-caption\" href=\"https://mobirise.com\">\n                    LawyerM4\n                </a>\n            </span>\n        </div>\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showItems\">\n            <div class=\"hamburger\">\n                <span></span>\n                <span></span>\n                <span></span>\n                <span></span>\n            </div>\n        </button>\n      <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n            <ul mbr-menu=\"\" class=\"navbar-nav nav-dropdown\" mbr-theme-style=\"display-4\" mbr-class=\"{'nav-right': !showButtons,'navbar-nav-top-padding': isPublish &amp;&amp; !showBrand &amp;&amp; !showLogo}\">\n                <li class=\"nav-item\">\n                    <a class=\"nav-link link text-black\" href=\"https://mobirise.com\" data-app-selector=\".nav-link,.dropdown-item\">\n                        PRACTICE AREAS\n                    </a>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link link text-black\" href=\"https://mobirise.com\" data-app-selector=\".nav-link,.dropdown-item\">\n                        OUR LEGAL TEAM\n                    </a>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link link text-black\" href=\"https://mobirise.com\" data-app-selector=\".nav-link,.dropdown-item\">\n                        OUR HISTORY\n                    </a>\n                </li>\n            </ul>\n            <div class=\"icons-menu\" mbr-if=\"showIcons\">\n              <a href=\"https://mobirise.com\" target=\"_blank\">\n                <span mbr-icon=\"\" class=\"p-2 mbr-iconfont mbri-mobile\"></span>\n              </a>\n              <a href=\"https://mobirise.com\" target=\"_blank\" mbr-if=\"iconsAmount > 1\">\n                <span mbr-icon=\"\" class=\"p-2 mbr-iconfont mbri-letter\"></span>\n              </a>\n              <a href=\"https://mobirise.com\" target=\"_blank\" mbr-if=\"iconsAmount > 2\">\n                <span mbr-icon=\"\" class=\"p-2 mbr-iconfont mbri-globe-2\"></span>\n              </a>\n              <a href=\"https://mobirise.com\" target=\"_blank\" mbr-if=\"iconsAmount > 3\">\n                <span mbr-icon=\"\" class=\"p-2 mbr-iconfont mbri-briefcase\"></span>\n              </a>\n              <a href=\"https://mobirise.com\" target=\"_blank\" mbr-if=\"iconsAmount > 4\">\n                <span mbr-icon=\"\" class=\"p-2 mbr-iconfont mbri-briefcase\"></span>\n              </a>\n              <a href=\"https://mobirise.com\" target=\"_blank\" mbr-if=\"iconsAmount > 5\">\n                <span mbr-icon=\"\" class=\"p-2 mbr-iconfont mbri-briefcase\"></span>\n              </a>\n            </div>\n            <div mbr-if=\"showButtons\" mbr-buttons=\"\" mbr-theme-style=\"display-4\" class=\"navbar-buttons mbr-section-btn\">\n                <a class=\"btn btn-md btn-black-outline\" href=\"https://mobirise.com\">\n                  CONTACT US\n                </a>\n            </div>\n      </div>\n    </nav>\n</section>\n",
+          "_cid": "ryEYy2GZqE",
+          "_anchor": "menu2-8",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "menu",
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-section-title": {
+              "letter-spacing": ".1em"
+            },
+            ".mbr-text": {
+              "letter-spacing": "0.03rem"
+            },
+            ".card-img span": {
+              "font-size": "100px"
+            }
+          },
+          "_name": "header4",
+          "_customHTML": "<section class=\"header4\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" plugins=\"PlayerVimeo\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"checkbox\" title=\"Show Arrow\" name=\"showArrow\" checked condition=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n         \n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Icon\" name=\"showIcon\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" value=\"../_images/img/03.jpg\" title=\"Background Image\" selected parallax>\n            <input type=\"color\" value=\"#510938\" title=\"Background Color\">\n            <input type=\"video\" value=\"https://www.youtube.com/watch?v=l8UXhtqV6hU\" title=\"Background Video\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"rgb(7, 9, 21)\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container align-center\">\n        <div class=\"row justify-content-md-center\">\n            <div class=\"mbr-white col-md-10\">\n                <div class=\"card-img pb-3\" mbr-if=\"showIcon\">\n                    <span mbr-icon class=\"mbr-iconfont mbrib-map-pin\"></span>\n                </div>\n                \n                <h1 class=\"mbr-section-title align-center mbr-white my-4 mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title, .card-img\">MINNESOTA FAMILY LAW</h1>\n                <p class=\"mbr-text align-center py-2 mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Family law issues can be messy, and even the most amicable of separations can quickly escalate into a contested legal issue. At &nbsp;our law office, we understand that when you are facing divorce, child custody problems, or any family-related matter, you may be feeling stressed.<br><br>When you work with my firm, you can be confident that your case is in good hands. I have years of experience handling a variety of legal matters and successfully settling them inside and outside of court. As a family law attorney, I am dedicated to the well-being of my clients and treat each client with respect and integrity. You can count on me to get the job done!</p>\n                <div class=\"mbr-section-btn\" mbr-buttons mbr-theme-style=\"display-4\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-md btn-white\" href=\"index.html#form3-a\" data-app-placeholder=\"Type Text\">LEARN MORE</a></div>\n            </div>\n        </div>\n    </div>\n    <div mbr-if=\"showArrow\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n        <a href=\"#next\">\n            <i class=\"mbri-arrow-down mbr-iconfont\"></i>\n        </a>\n    </div>\n</section>",
+          "_cid": "ryEXKdaA7n",
+          "_anchor": "header4-2",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".card-title": {
+              "letter-spacing": "0.1em",
+              "color": "#232323",
+              "margin": "0",
+              "padding-bottom": "1.5rem",
+              "text-align": "center"
+            },
+            ".card": {
+              "margin-bottom": "2rem",
+              ".card-wrapper": {
+                "height": "100%"
+              }
+            },
+            ".card-box": {
+              "padding-top": "2rem",
+              "p": {
+                "color": "#444",
+                "letter-spacing": "0.03em",
+                "margin": "0",
+                "padding-bottom": "1.5rem"
+              }
+            },
+            ".mbr-section-title": {
+              "letter-spacing": "0.1em",
+              "margin": "0 auto",
+              "margin-bottom": "2rem"
+            },
+            ".btn": {
+              "margin": ".3rem"
+            }
+          },
+          "_name": "features3",
+          "_customHTML": "<section class=\"features3\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\">\n        <input type=\"checkbox\" title=\"Show Main Title\" name=\"showMaintitle\" checked>\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n        <select title=\"Cards\" name=\"cardsAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\" selected>3</option>\n            <option value=\"4\">4</option>\n            <option value=\"5\">5</option>\n            <option value=\"6\">6</option>\n        </select>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background2.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#f9f9f9\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=l8UXhtqV6hU\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#efefef\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\">\n        <h2 class=\"mbr-section-title pb-3 mbr-bold mbr-fonts-style align-center\" mbr-theme-style=\"display-2\" mbr-if=\"showMaintitle\" data-app-selector=\".mbr-section-title\">FAMILY LAW REPRESENTATION</h2>\n        <div class=\"row row-content justify-content-center\">\n            <div class=\"card p-3 col-12 col-md-6\" mbr-class=\"{'col-lg-4': cardsAmount == '3'|| cardsAmount =='5'|| cardsAmount== '6'}\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <img src=\"../_images/img/01.jpg\" title>\n                    </div>\n                    <div class=\"card-box\">\n                        <h4 class=\"card-title mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n                            DIVORCE ATTORNEY</h4>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-box > p, .mbr-section-btn\">Are you considering filing for divorce? Have you been already served divorce papers? You need to contact my firm right away. I can help protect you, your assets, and your parental rights during a split. Divorce can be stressful, but working with the right attorney can provide you with the outcome you deserve.<br><br><br><br></p>\n                          \n                    </div>\n                    <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\">\n                         <a href=\"https://mobirise.com\" class=\"btn btn-warning\">READ MORE</a>\n                    </div>  \n                </div>\n            </div>\n        \n            <div class=\"card p-3 col-12 col-md-6\" mbr-if=\"cardsAmount > 1\" mbr-class=\"{'col-lg-4': cardsAmount == '3'|| cardsAmount =='5'|| cardsAmount== '6'}\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <img src=\"../_images/img/02.jpg\" title>\n                    </div>\n                    <div class=\"card-box\">\n                        <h4 class=\"card-title mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n                           FAMILY LAWYER</h4>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-box > p, .mbr-section-btn\">If you find yourself facing any of the following family law matters, do not hesitate to contact my firm right away.<br>If you are seeking looking to change a portion of your divorce decree in regarding to spousal support, you need to work with my firm. I will help protect you against unfair payments or ensure that your alimony payments are received in a timely manner.<br><br><br></p>\n                    </div>\n                    <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\">\n                         <a href=\"https://mobirise.com\" class=\"btn btn-warning\">READ MORE</a>\n                    </div>  \n                </div>\n            </div>\n        \n            <div class=\"card p-3 col-12 col-md-6\" mbr-if=\"cardsAmount > 2\" mbr-class=\"{'col-lg-4': cardsAmount == '3'|| cardsAmount =='5'|| cardsAmount== '6'}\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <img src=\"../_images/img/03.jpg\" title>\n                    </div>\n                    <div class=\"card-box\">\n                        <h4 class=\"card-title mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n                           CHILD SUPPORT</h4>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-box > p, .mbr-section-btn\">\n                            Negotiating a child support payment can often lead to complications during a divorce.<br> \n                        There is a reason that child custody cases are sometimes referred to as \"custody battles.\" These cases are often the most contested of all family law matters. Understanding the custody laws in Minnesota can be difficult, but with the assistance of my firm, you can protect your child's best interests and your parental rights.<br></p>\n                          \n                    </div>\n                    <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\">\n                        <a href=\"https://mobirise.com\" class=\"btn btn-warning\">READ MORE</a>\n                    </div>  \n                </div>\n            </div>\n        \n            <div class=\"card p-3 col-12 col-md-6\" mbr-if=\"cardsAmount > 3\" mbr-class=\"{'col-lg-4': cardsAmount == '3'|| cardsAmount =='5'|| cardsAmount== '6'}\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <img src=\"../_images/img/01.jpg\" title>\n                    </div>\n                    <div class=\"card-box\">\n                        <h4 class=\"card-title mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n                           O TEMPORA, O MORES. SEM SED DICTUM\n                        </h4>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-box > p, .mbr-section-btn\">\n                            Lorem ipsum dolor sit amet, consectetur elit. Nulla convallis pulvinar vestibulum. Donec eleifend, sem sed dictum mattis, turpis purus.\n                        </p>\n                         \n                    </div>\n                    <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\">\n                          <a href=\"https://mobirise.com\" class=\"btn btn-warning\">READ MORE</a>\n                    </div>  \n                </div>\n            </div>\n            <div class=\"card p-3 col-12 col-md-6\" mbr-class=\"{'col-lg-4': cardsAmount == '3'|| cardsAmount =='5'|| cardsAmount== '6'}\" mbr-if=\"cardsAmount>4\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <img src=\"../_images/img/02.jpg\" title>\n                    </div>\n                    <div class=\"card-box\">\n                        <h4 class=\"card-title mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n                            O TEMPORA, O MORES. SEM SED DICTUM\n                        </h4>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-box > p, .mbr-section-btn\">\n                            Lorem ipsum dolor sit amet, consectetur elit. Nulla convallis pulvinar vestibulum. Donec eleifend, sem sed dictum mattis, turpis purus. \n                        </p>\n                    </div>\n                    <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\">\n                         <a href=\"https://mobirise.com\" class=\"btn btn-warning\">READ MORE</a>\n                    </div> \n                </div>\n            </div>\n        \n            <div class=\"card p-3 col-12 col-md-6\" mbr-if=\"cardsAmount > 5\" mbr-class=\"{'col-lg-4': cardsAmount == '3'|| cardsAmount =='5'|| cardsAmount== '6'}\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <img src=\"../_images/img/03.jpg\" title>\n                    </div>\n                    <div class=\"card-box\">\n                        <h4 class=\"card-title mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n                           O TEMPORA, O MORES. SEM SED DICTUM\n                        </h4>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-box > p, .mbr-section-btn\">\n                            Lorem ipsum dolor sit amet, consectetur elit. Nulla convallis pulvinar vestibulum. Donec eleifend, sem sed dictum mattis, turpis purus.\n                        </p>\n                    </div>\n                    <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\">\n                        <a href=\"https://mobirise.com\" class=\"btn btn-warning\">READ MORE</a>\n                    </div> \n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "ryEXSF4TgD",
+          "_anchor": "features3-3",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "h4": {
+              "display": "flex",
+              "letter-spacing": "0.03em",
+              "color": "#ffffff",
+              "-webkit-align-items": "center",
+              "align-items": "center"
+            },
+            ".panel-text": {
+              "letter-spacing": "0.03em",
+              "color": "#444444"
+            },
+            ".mbr-section-title": {
+              "letter-spacing": "0.1em",
+              "color": "#ffffff"
+            },
+            ".mbr-section-subtitle": {
+              "letter-spacing": "0.03em",
+              "font-weight": "500",
+              "color": "#ffffff"
+            },
+            ".accordion-content": {
+              "-webkit-flex-basis": "100%",
+              "flex-basis": "100%"
+            },
+            ".panel-group": {
+              "width": "100%"
+            },
+            ".card": {
+              "border-bottom": "1px solid @panelColor",
+              "border-radius": "0px",
+              "margin-bottom": ".5rem",
+              ".card-header": {
+                "border-radius": "0px",
+                "border": "0px",
+                "padding": "0",
+                "a.panel-title": {
+                  "transition": "all .3s",
+                  "background-color": "@accordionColor",
+                  "margin-bottom": "0",
+                  "font-style": "normal",
+                  "font-weight": "500",
+                  "display": "flex",
+                  "-webkit-align-items": "center",
+                  "align-items": "center",
+                  "text-decoration": "none !important",
+                  "margin-top": "-1px",
+                  "line-height": "normal",
+                  "&:hover": {
+                    "opacity": "0.5"
+                  },
+                  "&:focus": {
+                    "text-decoration": "none !important"
+                  },
+                  ".sign": {
+                    "padding-left": "1rem"
+                  },
+                  "h4": {
+                    "padding": "1rem 1rem",
+                    "margin-bottom": "0"
+                  }
+                }
+              },
+              ".panel-body": {
+                "background": "@panelColor"
+              }
+            },
+            ".media-container-row": {
+              "> div": {
+                "display": "flex",
+                "-webkit-align-items": "center",
+                "align-items": "center",
+                "-webkit-justify-content": "center",
+                "justify-content": "center"
+              },
+              "& when (@reverseContent)": {
+                "-webkit-flex-direction": "row-reverse",
+                "flex-direction": "row-reverse"
+              }
+            },
+            ".sign": {
+              "color": "#ffffff"
+            },
+            "@media (max-width: 991px)": {
+              ".media-container-row": {
+                "> div": {
+                  "-webkit-flex": "0 0 100%",
+                  "flex": "0 0 100%",
+                  "max-width": "100%"
+                },
+                "& when (@reverseContent)": {
+                  "-webkit-flex-direction": "column-reverse",
+                  "flex-direction": "column-reverse"
+                }
+              },
+              ".mbr-figure": {
+                "padding-right": "0",
+                "padding-left": "0",
+                "padding-top": "2rem",
+                "& when (@reverseContent)": {
+                  "padding-top": "0",
+                  "padding-bottom": "2rem"
+                }
+              }
+            }
+          },
+          "_name": "accordion1",
+          "_customHTML": "<section class=\"accordion1\" group=\"Accordion & Toggles & Tabs\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background':bg.parallax}\" plugins=\"mbr-switch-arrow\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"4\">\n        <input type=\"checkbox\" title=\"Media on Right/Left\" name=\"reverseContent\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"color\" title=\"Accordion Color\" name=\"accordionColor\" value=\"#149dcc\">\n        <input type=\"color\" title=\"Panel Color\" name=\"panelColor\" value=\"#efefef\">\n        <select title=\"Accordions Count\" name=\"bootstrapAccordion\">\n             <option value=\"1\">1</option>\n             <option value=\"2\">2</option>\n             <option value=\"3\">3</option>\n             <option value=\"4\">4</option>\n             <option value=\"5\">5</option>\n             <option value=\"6\" selected>6</option>\n        </select>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/img/04.jpg\" selected parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#f9f9f9\">\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=l8UXhtqV6hU\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"rgb(7, 9, 21)\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-md-10\">\n                <h2 class=\"mbr-section-title align-center pb-3 mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">FREQUENTLY ASKED QUESTIONS</h2>\n                <h3 class=\"mbr-section-subtitle pt-2 align-center mbr-light mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n                    LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPICISING ELIT. SED DO EIUSMOD\n                    TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA.\n                </h3>\n            </div>\n        </div>\n        <div class=\"media-container-row pt-5\">\n            <div class=\"col-md-6\">\n            <div class=\"accordion-content\">\n                <div id=\"bootstrap-accordion\" class=\"panel-group accordionStyles accordion \" role=\"tablist\" aria-multiselectable=\"true\">\n                        <div class=\"card\">\n                            <div class=\"card-header\" role=\"tab\" id=\"headingOne\">\n                                <a role=\"button\" class=\"panel-title text-black\" data-toggle=\"collapse\" data-core href=\"#collapse1\" aria-expanded=\"true\" aria-controls=\"collapse1\">\n                                    <span class=\"sign mbr-iconfont mbri-arrow-down inactive\"></span>\n                                    <h4 class=\"mbr-fonts-style header-text\" mbr-theme-style=\"display-7\" data-app-selector=\".header-text, .sign\">ALIMONY/CHILD SUPPORT</h4>\n                                </a>\n                            </div>\n                            <div id=\"collapse1\" class=\"panel-collapse noScroll collapse show\" role=\"tabpanel\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\">\n                                <div class=\"panel-body p-4\">\n                                    <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text\">If you are seeking alimony or looking to change a portion of your divorce decree in regarding to spousal support, you need to work with my firm. I will help protect you against unfair payments or ensure that your alimony payments are received in a timely manner.<br></p>\n                                </div>\n                            </div>\n                        </div>\n                \n                        <div class=\"card\" mbr-if=\"bootstrapAccordion > 1\">\n                            <div class=\"card-header\" role=\"tab\" id=\"headingTwo\">\n                                <a role=\"button\" class=\"collapsed panel-title text-black\" data-toggle=\"collapse\" data-core href=\"#collapse2\" aria-expanded=\"false\" aria-controls=\"collapse2\">\n                                    <span class=\"sign mbr-iconfont mbri-arrow-down inactive\"></span>\n                                    <h4 class=\"mbr-fonts-style header-text\" mbr-theme-style=\"display-7\">DIVORCE</h4>\n                                </a>\n                                \n                            </div>\n                            <div id=\"collapse2\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingTwo\" data-parent=\"#accordion\">\n                                <div class=\"panel-body p-4\">\n                                    <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text\">Are you considering filing for divorce? Have you been already served divorce papers? You need to contact my firm right away. I can help protect you, your assets, and your parental rights during a split. Divorce can be stressful, but working with the right attorney can provide you with the outcome you deserve.<br></p>\n                                </div>\n                            </div>\n                        </div>\n                \n                        <div class=\"card\" mbr-if=\"bootstrapAccordion > 2\">\n                            <div class=\"card-header\" role=\"tab\" id=\"headingThree\">\n                                <a role=\"button\" class=\"collapsed panel-title text-black\" data-toggle=\"collapse\" data-core href=\"#collapse3\" aria-expanded=\"false\" aria-controls=\"collapse3\">\n                                    <span class=\"sign mbr-iconfont mbri-arrow-down inactive\"></span>\n                                    <h4 class=\"mbr-fonts-style header-text\" mbr-theme-style=\"display-7\" data-app-selector=\".header-text, .sign\">\n                                         CHILD ABUSE NEGLECT</h4>\n                                </a>\n                            </div>\n                            <div id=\"collapse3\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingThree\" data-parent=\"#accordion\">\n                                <div class=\"panel-body p-4\">\n                                    <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text\">\n                                       If you have been accused of child abuse or neglect, or you know that your child is being abused by a caretaker or other family member, you need to work with my firm. I can help protect your rights as a parent and ensure that your child is kept safe.</p>\n                                </div>\n                            </div>\n                        </div>\n                \n                        <div class=\"card\" mbr-if=\"bootstrapAccordion > 3\">\n                            <div class=\"card-header\" role=\"tab\" id=\"headingFour\">\n                                <a role=\"button\" class=\"collapsed panel-title text-black\" data-toggle=\"collapse\" data-core href=\"#collapse4\" aria-expanded=\"false\" aria-controls=\"collapse4\">\n                                    <span class=\"sign mbr-iconfont mbri-arrow-down inactive\"></span>\n                                    <h4 class=\"mbr-fonts-style header-text\" mbr-theme-style=\"display-7\" data-app-selector=\".header-text, .sign\">CHILD CUSTODY</h4>\n                                </a>\n                            </div>\n                            <div id=\"collapse4\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingFour\" data-parent=\"#accordion\">\n                                <div class=\"panel-body p-4\">\n                                    <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text\">There is a reason that child custody cases are sometimes referred to as \"custody battles.\" These cases are often the most contested of all family law matters. Understanding the custody laws in Minnesota can be difficult, but with the assistance of my firm, you can protect your child's best interests and your parental rights.<br></p>\n                                </div>\n                            </div>\n                        </div>\n                \n                        <div class=\"card\" mbr-if=\"bootstrapAccordion > 4\">\n                            <div class=\"card-header\" role=\"tab\" id=\"headingFive\">\n                                <a role=\"button\" class=\"collapsed panel-title text-black\" data-toggle=\"collapse\" data-core href=\"#collapse5\" aria-expanded=\"false\" aria-controls=\"collapse5\">\n                                    <span class=\"sign mbr-iconfont mbri-arrow-down inactive\"></span>\n                                    <h4 class=\"mbr-fonts-style header-text\" mbr-theme-style=\"display-7\" data-app-selector=\".header-text, .sign\">CHILD SUPPORT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</h4>\n                                </a>\n                            </div>\n                            <div id=\"collapse5\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingFive\" data-parent=\"#accordion\">\n                                <div class=\"panel-body p-4\">\n                                    <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text\">Negotiating a child support payment can often lead to complications during a divorce. At our law office, will work with you to determine an appropriate payment or enforce court orders for payment from a negligent parent.<br></p>\n                                </div>\n                            </div>\n                        </div>\n                \n                        <div class=\"card\" mbr-if=\"bootstrapAccordion > 5\">\n                            <div class=\"card-header\" role=\"tab\" id=\"headingSix\">\n                                <a role=\"button\" class=\"collapsed panel-title text-black\" data-toggle=\"collapse\" data-core href=\"#collapse6\" aria-expanded=\"false\" aria-controls=\"collapse6\">\n                                    <span class=\"sign mbr-iconfont mbri-arrow-down inactive\"></span>\n                                    <h4 class=\"mbr-fonts-style header-text\" mbr-theme-style=\"display-7\" data-app-selector=\".header-text, .sign\">UNCONTESTED DIVORCE</h4>\n                                </a>\n                            </div>\n                            <div id=\"collapse6\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingSix\" data-parent=\"#accordion\">\n                                <div class=\"panel-body p-4\">\n                                    <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text\">Looking for a faster, less stressful and more affordable approach to divorce? Uncontested divorce may be the best option for you. No-court divorce works for divorcing couples who can come to agreements without litigation and who are willing to work together.<br></p>\n                                </div>\n                            </div>\n                        </div>\n                </div>\n            </div>\n            </div>\n            <div class=\"col-md-6\">\n            <div class=\"mbr-figure\">\n                    <img src=\"../_images/img/01.jpg\" alt=\"Mobirise\">\n            </div>\n        </div>\n    </div>\n    </div>         \n</section>",
+          "_cid": "ryEXZSZ4PT",
+          "_anchor": "accordion1-4",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value",
+              "& when (@gradientBg)": {
+                "background": "linear-gradient(0deg, @bg-value, @color2)"
+              }
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-section-title": {
+              "font-weight": "bold",
+              "letter-spacing": "0.1em",
+              "color": "#232323",
+              "text-align": "center"
+            },
+            ".nav": {
+              "border": "none"
+            },
+            ".nav-tabs": {
+              "-webkit-justify-content": "center",
+              "justify-content": "center",
+              "-webkit-flex-wrap": "wrap",
+              "flex-wrap": "wrap"
+            },
+            ".nav-tabs .nav-link": {
+              "box-sizing": "border-box",
+              "color": "@tabsColor",
+              "font-style": "normal",
+              "font-weight": "500",
+              "padding": "1rem 3rem",
+              "margin": "0px",
+              "margin-left": "-0.5px",
+              "margin-right": "-0.5px",
+              "margin-bottom": "1rem",
+              "transition": "all .5s",
+              "border-radius": "0px !important",
+              "border-bottom": "1px solid @tabsColor",
+              "&:hover": {
+                "border": "1px solid @tabsColor",
+                "background-color": "@activeTabColor1",
+                "color": "contrast(@activeTabColor1)"
+              },
+              "&.active": {
+                "border": "1px solid @tabsColor",
+                "font-weight": "500",
+                "color": "contrast(@activeTabColor1)",
+                "font-style": "normal",
+                "background": "@activeTabColor1"
+              }
+            },
+            "P": {
+              "text-align": "center"
+            }
+          },
+          "_name": "tabs1",
+          "_customHTML": "<section class=\"tabs2\" group=\"Accordion & Toggles & Tabs\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background':bg.parallax}\" plugins=\"mbr-tabs\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"5\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"color\" title=\"Tabs Color\" name=\"tabsColor\" value=\"#232323\">\n        <input type=\"color\" title=\"Active Tab Color\" name=\"activeTabColor1\" value=\"#18191b\">\n        <select title=\"Tabs Count\" name=\"bootstrapTabs\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\" selected>4</option>\n            <option value=\"5\">5</option>\n            <option value=\"6\">6</option>\n        </select>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/img/01.jpg\" parallax selected>\n            <input type=\"color\" title=\"Background Color\" value=\"#f7f7f7\">\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=l8UXhtqV6hU\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Gradient\" name=\"gradientBg\" condition=\"bg.type=='color'\" checked>\n        <input type=\"color\" title=\"Color 2\" name=\"color2\" value=\"#ffffff\" condition=\"gradientBg && bg.type == 'color'\">\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.9\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\">\n        <h2 class=\"mbr-section-title align-center pb-5 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">Top Professional Legal Assistance in Minnesota</h2>\n        <div class=\"media-container-row\">\n            <div class=\"col-12 col-md-10\">\n                <ul class=\"nav nav-tabs\" role=\"tablist\" data-app-placeholder=\"Type Title\">\n                    <li mbr-buttons mbr-theme-style=\"display-7\" class=\"nav-item\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrBtnColor,-mbrLink,-mbrBtnRemove\"><a class=\"nav-link mbr-fonts-style show active\" role=\"tab\" data-toggle=\"tab\" href=\"#tabs1-6_tab0\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">\n                            Why Choose Us</a></li>\n                    <li mbr-buttons mbr-theme-style=\"display-7\" class=\"nav-item\" mbr-if=\"bootstrapTabs > 1\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrBtnColor,-mbrLink,-mbrBtnRemove\"><a class=\"nav-link mbr-fonts-style show active\" role=\"tab\" data-toggle=\"tab\" href=\"#tabs1-6_tab1\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">Family Law &nbsp; &nbsp;</a></li>\n                    <li mbr-buttons mbr-theme-style=\"display-7\" class=\"nav-item\" mbr-if=\"bootstrapTabs > 2\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrBtnColor,-mbrLink,-mbrBtnRemove\"><a class=\"nav-link mbr-fonts-style show active\" role=\"tab\" data-toggle=\"tab\" href=\"#tabs1-6_tab2\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">\n                            Child Support\n                        </a></li>\n                    <li mbr-buttons mbr-theme-style=\"display-7\" class=\"nav-item\" mbr-if=\"bootstrapTabs > 3\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrBtnColor,-mbrLink,-mbrBtnRemove\"><a class=\"nav-link mbr-fonts-style show active\" role=\"tab\" data-toggle=\"tab\" href=\"#tabs1-6_tab3\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">Divorce/Mediation</a></li>\n                    <li mbr-buttons mbr-theme-style=\"display-7\" class=\"nav-item\" mbr-if=\"bootstrapTabs > 4\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrBtnColor,-mbrLink,-mbrBtnRemove\">\n                        <a class=\"nav-link mbr-fonts-style active\" role=\"tab\" data-toggle=\"tab\" href=\"#tab5\" aria-expanded=\"true\">\n                            Host Anywhere\n                        </a>\n                    </li>\n                    <li mbr-buttons mbr-theme-style=\"display-7\" class=\"nav-item\" mbr-if=\"bootstrapTabs > 5\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrBtnColor,-mbrLink,-mbrBtnRemove\">\n                        <a class=\"nav-link mbr-fonts-style active\" role=\"tab\" data-toggle=\"tab\" href=\"#tab6\" aria-expanded=\"true\">\n                            Easy to Use\n                        </a>\n                    </li>\n                </ul>\n                <div class=\"tab-content\">\n                    <div id=\"tab1\" class=\"tab-pane in active\" role=\"tabpanel\">\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <p class=\"mbr-text py-5 mbr-fonts-style\" mbr-theme-style=\"display-7\">\n                                    Our legal office is committed to the best outcome for every client that walks through our doors needing our legal expertise. In addition to offering top-notch services and flexible hours, our staff has the experience needed to help you with everything from criminal charges to divorce and meditation. When you choose us, you are choosing an experienced legal office with decades of experience and knowledge to join your team.\n                                </p>\n                            </div>\n                        </div>\n                    </div>\n                    <div id=\"tab2\" class=\"tab-pane\" role=\"tabpanel\">\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <p class=\"mbr-text py-5 mbr-fonts-style\" mbr-theme-style=\"display-7\">\n                                    At our firm, we understand how important and emotionally stressful it can be when dealing with issues involving your family. That is why we try to connect with all of our clients to build trust so that information can be freely shared, so we can help advance your goal.\n                                </p>\n                            </div>\n                        </div>\n                    </div>\n                    <div id=\"tab3\" class=\"tab-pane\" role=\"tabpanel\">\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <p class=\"mbr-text py-5 mbr-fonts-style\" mbr-theme-style=\"display-7\">\n                                    Child support is an ongoing obligation until the point when the child has reached his or her 18th birthday or high school graduation. In addition, both parents could be obligated to contribute financial resources to the post high school education of the children.\n                                </p>\n                            </div>\n                        </div>\n                    </div>\n                    <div id=\"tab4\" class=\"tab-pane\" role=\"tabpanel\">\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <p class=\"mbr-text py-5 mbr-fonts-style\" mbr-theme-style=\"display-7\">Where are my children going to live? Will I need to sell my house? Who will have custody of the children? How am I going to pay all the bills? These are the questions many of our clients have when going through a divorce,<br><br>Our attorneys will help lead you through this emotional and stressful time of your divorce. We will be here to answer all your questions and make sure that your wishes are appropriately addressed during the proceedings.&nbsp;</p>\n                            </div>\n                        </div>\n                    </div>\n                    <div id=\"tab5\" class=\"tab-pane\" role=\"tabpanel\">\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <p class=\"mbr-text py-5 mbr-fonts-style\" mbr-theme-style=\"display-7\">\n                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, id qui excepturi quidem cumque ipsum mollitia. Repellendus ab, aliquid molestias minus dolores reiciendis porro voluptatibus dolore, qui quod repellat ea?\n                                </p>\n                            </div>\n                        </div>\n                    </div>\n                    <div id=\"tab6\" class=\"tab-pane\" role=\"tabpanel\">\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <p class=\"mbr-text py-5 mbr-fonts-style\" mbr-theme-style=\"display-7\">\n                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum id provident ea quae explicabo aperiam praesentium distinctio veritatis natus maiores dicta numquam error nemo, corrupti dolore molestias quia esse adipisci!\n                                </p>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "ryEY9i6kCr",
+          "_anchor": "tabs1-6",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".section-text": {
+              "padding": "2rem 0",
+              "letter-spacing": "0.03em"
+            },
+            ".inner-container": {
+              "margin": "0 auto",
+              "position": "relative",
+              ".mbr-iconfont": {
+                "z-index": "1",
+                "position": "absolute",
+                "font-size": "9rem",
+                "color": "#efefef",
+                "opacity": ".1",
+                "&.left-top": {
+                  "left": "-1rem",
+                  "top": "-1rem"
+                },
+                "&.right-down": {
+                  "right": "-1rem",
+                  "bottom": "-1rem"
+                }
+              },
+              ".section-text": {
+                "z-index": "3",
+                "min-height": "10rem"
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".inner-container": {
+                "width": "100% !important"
+              },
+              ".mbr-iconfont": {
+                "font-size": "6rem !important"
+              }
+            }
+          },
+          "_name": "article5",
+          "_customHTML": "<section class=\"mbr-section article content10\" group=\"Article\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Text Width\" name=\"innerWidth\" min=\"50\" max=\"100\" step=\"1\" value=\"80\">\n<!--         <input type=\"range\" inline title=\"Line Width\" name=\"lineLength\" min=\"10\" max=\"100\" step=\"1\" value=\"20\"> -->\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#444444\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"inner-container\" mbr-style=\"{'width': innerWidth + '%'}\">\n            <!-- <hr class=\"line\" mbr-style=\"{'width': lineLength + '%'}\"> -->\n            <span mbr-icon class=\"mbr-iconfont inactive mbri-quote-left left-top\">\n            </span>\n            <div class=\"section-text align-center mbr-white mbr-fonts-style\" mbr-theme-style=\"display-2\" data-app-selector=\".section-text\" mbr-text>The initial consultation is FREE, confidential, and there is no obligation. One of staff attorneys wants to sit down with you to understand your situation and protect your rights.</div>\n            <span mbr-icon class=\"mbr-iconfont inactive mbri-quote-right right-down\">\n            </span>\n            <!-- <hr class=\"line\" mbr-style=\"{'width': lineLength + '%'}\"> -->\n        </div>\n    </div>\n</section>",
+          "_cid": "ryEYsh1ipA",
+          "_anchor": "article5-7",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-section-title": {
+              "font-weight": "bold",
+              "letter-spacing": "0.1em"
+            },
+            ".section-content-title": {
+              "font-weight": "600",
+              "color": "#333333",
+              "letter-spacing": "0.03em"
+            },
+            ".section-content-text": {
+              "letter-spacing": "0.03em"
+            },
+            ".progressbar-title p": {
+              "margin-bottom": "8px",
+              "letter-spacing": "0.03em"
+            },
+            ".progress": {
+              "width": "100%",
+              "height": "(@progressHeight * 1px)"
+            },
+            ".progress-bar": {
+              "height": "(@progressHeight * 1px)",
+              "background-color": "@progressColor"
+            },
+            ".title-wrap": {
+              "display": "flex",
+              "-webkit-justify-content": "space-between",
+              "justify-content": "space-between"
+            },
+            ".progressbar-number": {
+              "display": "inline-block"
+            },
+            ".progress-primary": {
+              "background": "rgba(206, 206, 206, 0.4)",
+              "border": "none",
+              "outline": "none"
+            },
+            ".progress-primary::-webkit-progress-bar": {
+              "background": "rgba(206, 206, 206, 0.4)"
+            },
+            ".progress_value": {
+              "position": "relative"
+            },
+            "progress[value]::-webkit-progress-bar": {
+              "background": "rgba(206, 206, 206, 0.4)"
+            },
+            "progress::-webkit-progress-value": {
+              "background": "@progressColor"
+            },
+            "progress[value]::-moz-progress-bar": {
+              "background": "@progressColor"
+            },
+            "progress::-ms-fill": {
+              "background": "@progressColor"
+            },
+            ".progress1 .progressbar-number:before": {
+              "content": "'@{progress1}'"
+            },
+            ".progress2 .progressbar-number:before": {
+              "content": "'@{progress2}'"
+            },
+            ".progress3 .progressbar-number:before": {
+              "content": "'@{progress3}'"
+            },
+            ".progress4 .progressbar-number:before": {
+              "content": "'@{progress4}'"
+            },
+            ".progress5 .progressbar-number:before": {
+              "content": "'@{progress5}'"
+            },
+            ".progress-bar-1": {
+              "width": "(@progress1 * 1%)"
+            },
+            ".progress-bar-2": {
+              "width": "(@progress2 * 1%)"
+            },
+            ".progress-bar-3": {
+              "width": "(@progress3 * 1%)"
+            },
+            ".progress-bar-4": {
+              "width": "(@progress4 * 1%)"
+            },
+            ".progress-bar-5": {
+              "width": "(@progress5 * 1%)"
+            },
+            ".row": {
+              "& when (@reverseContent)": {
+                "-webkit-flex-direction": "row-reverse",
+                "flex-direction": "row-reverse"
+              }
+            },
+            "@media (min-width: 768px)": {
+              ".text-elements": {
+                "& when (@reverseContent)": {
+                  "padding-left": "48px",
+                  "padding-right": "15px"
+                }
+              },
+              ".progress_elements": {
+                "& when (@reverseContent)": {
+                  "padding-left": "15px",
+                  "padding-right": "48px"
+                }
+              }
+            }
+          },
+          "_name": "progress2",
+          "_customHTML": "<section class=\"progress-bars2\" group=\"Progress\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Media on Right/Left\" name=\"reverseContent\">\n        <input type=\"color\" title=\"Progress Color\" name=\"progressColor\" value=\"#232323\">\n        <input type=\"range\" inline title=\"Progress Height\" name=\"progressHeight\" min=\"5\" max=\"25\" step=\"1\" value=\"25\">\n        <select title=\"Progress Count\" name=\"progressCount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\" selected>3</option>\n            <option value=\"4\">4</option>\n            <option value=\"5\">5</option>\n        </select>\n        <input type=\"range\" inline title=\"Progress 1\" name=\"progress1\" min=\"0\" max=\"100\" step=\"1\" value=\"81\">\n        <input type=\"range\" inline title=\"Progress 2\" name=\"progress2\" min=\"0\" max=\"100\" step=\"1\" value=\"77\" condition=\"progressCount>1\">\n        <input type=\"range\" inline title=\"Progress 3\" name=\"progress3\" min=\"0\" max=\"100\" step=\"1\" value=\"56\" condition=\"progressCount>2\">\n        <input type=\"range\" inline title=\"Progress 4\" name=\"progress4\" min=\"0\" max=\"100\" step=\"1\" value=\"28\" condition=\"progressCount>3\">\n        <input type=\"range\" inline title=\"Progress 5\" name=\"progress5\" min=\"0\" max=\"100\" step=\"1\" value=\"10\" condition=\"progressCount>4\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background4.jpg\" selected>\n            <input type=\"color\" title=\"Background Color\" value=\"#fafafa\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=l8UXhtqV6hU\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <h2 class=\"mbr-section-title pb-3 align-center mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">TRUSTED FAMILY LAW COUNSEL FOR 30 YEARS</h2>\n\n        <div class=\"row pt-5 \">\n            <div class=\"col-md-6 text-elements\">\n                <h4 class=\"section-content-title pb-3 align-left mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".section-content-title\">\n                    Practice Areas</h4>\n                <p class=\"section-content-text align-left mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".section-content-text\">\n                    Obtaining the guidance of a Twin Cities divorce lawyer can make all the difference in the outcome of your case. The laws governing family issues can be difficult to navigate, and you should never have to face the Minnesota family courts alone. \n                </p>\n            </div>\n        \n            <div class=\"progress_elements col-md-6\">\n                <div class=\"progress1 pb-3\">\n                    <div class=\"title-wrap\">\n                        <div class=\"progressbar-title mbr-fonts-style\" mbr-theme-style=\"display-7\">\n                            <p data-app-selector=\".progressbar-title p, .progress_value\">\n                                Divorce/Mediation</p>\n                        </div>\n                        <div class=\"progress_value mbr-fonts-style\" mbr-theme-style=\"display-7\">\n                            <div class=\"progressbar-number\">\n                            </div>\n                            <span>%</span>\n                        </div>\n                    </div>\n                     <div class=\"progress\">\n                          <div class=\"progress-bar progress-bar-1 progress-bar-striped progress-bar-animated\" role=\"progressbar\" aria-valuenow=\"100\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\n                    </div>\n                </div>\n                    \n                <div class=\"progress2 pb-3\" mbr-if=\"progressCount>1\">\n                    <div class=\"title-wrap\">\n                        <div class=\"progressbar-title mbr-fonts-style\" mbr-theme-style=\"display-7\">\n                            <p data-app-selector=\".progressbar-title p, .progress_value\">\n                                Family Law\n                            </p>\n                        </div>\n                        <div class=\"progress_value mbr-fonts-style\" mbr-theme-style=\"display-7\">\n                            <div class=\"progressbar-number\"></div>\n                            <span>%</span>\n                        </div>\n                    </div>\n                    <div class=\"progress\">\n                        <div class=\"progress-bar progress-bar-2 progress-bar-striped progress-bar-animated\" role=\"progressbar\" aria-valuenow=\"100\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\n                    </div>\n                </div>\n                \n                <div class=\"progress3 pb-3\" mbr-if=\"progressCount>2\">\n                    <div class=\"title-wrap\">\n                        <div class=\"progressbar-title mbr-fonts-style\" mbr-theme-style=\"display-7\">\n                            <p data-app-selector=\".progressbar-title p, .progress_value\">\n                                Child Custody</p>\n                        </div>\n                        <div class=\"progress_value mbr-fonts-style\" mbr-theme-style=\"display-7\">\n                            <div class=\"progressbar-number\"></div>\n                            <span>%</span>\n                        </div>\n                    </div>\n                    <div class=\"progress\">\n                        <div class=\"progress-bar progress-bar-3 progress-bar-striped progress-bar-animated\" role=\"progressbar\" aria-valuenow=\"100\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\n                    </div>\n                </div>\n                \n                <div class=\"progress4 pb-3\" mbr-if=\"progressCount>3\">\n                    <div class=\"title-wrap\">\n                        <div class=\"progressbar-title mbr-fonts-style\" mbr-theme-style=\"display-7\">\n                            <p data-app-selector=\".progressbar-title p, .progress_value\">\n                                Immigration\n                            </p>\n                        </div>\n                        <div class=\"progress_value mbr-fonts-style\" mbr-theme-style=\"display-7\">\n                            <div class=\"progressbar-number\"></div>\n                            <span>%</span>\n                        </div>\n                    </div>\n                    <div class=\"progress\">\n                        <div class=\"progress-bar progress-bar-4 progress-bar-striped progress-bar-animated\" role=\"progressbar\" aria-valuenow=\"100\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\n                    </div>\n                </div>\n             \n                <div class=\"progress5 pb-3\" mbr-if=\"progressCount>4\">\n                    <div class=\"title-wrap\">\n                        <div class=\"progressbar-title mbr-fonts-style\" mbr-theme-style=\"display-7\">\n                            <p data-app-selector=\".progressbar-title p, .progress_value\">\n                                Securities\n                            </p>\n                        </div>\n                        <div class=\"progress_value mbr-fonts-style\" mbr-theme-style=\"display-7\">\n                            <div class=\"progressbar-number\"></div>\n                            <span>%</span>\n                        </div>\n                    </div>        \n                    <div class=\"progress\">    \n                        <div class=\"progress-bar progress-bar-5 progress-bar-striped progress-bar-animated\" role=\"progressbar\" aria-valuenow=\"100\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\n                    </div>\n                </div>\n            </div>    \n        </div>\n    </div>\n</section>",
+          "_cid": "ryFLXdsPSN",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "progress2-e"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".btn": {
+              "padding": "10px 15px 10px 15px",
+              "font-weight": "bold"
+            },
+            ".mbr-section-title": {
+              "letter-spacing": ".1em"
+            },
+            ".icon-description": {
+              "padding-top": "1rem",
+              "color": "#ffffff"
+            },
+            ".mbr-media": {
+              "height": "70px",
+              "span": {
+                "font-size": "48px",
+                "cursor": "pointer",
+                "border-radius": "50%",
+                "width": "6rem",
+                "height": "6rem",
+                "line-height": "6rem",
+                "position": "relative",
+                "display": "inline-block",
+                "transition": "all 0.25s",
+                "color": "white",
+                "&:hover": {
+                  "opacity": "0.7"
+                },
+                "&.mbri-play:before": {
+                  "position": "absolute",
+                  "left": "50%",
+                  "-webkit-transform": "translateX(-35%)",
+                  "-moz-transform": "translateX(-35%)",
+                  "-ms-transform": "translateX(-35%)",
+                  "-o-transform": "translateX(-35%)",
+                  "transform": "translateX(-35%)"
+                }
+              }
+            },
+            ".modalWindow": {
+              "position": "fixed",
+              "z-index": "5000",
+              "left": "0",
+              "top": "0",
+              "background-color": "rgba(61, 61, 61, 0.65)",
+              "width": "100%",
+              "height": "100%",
+              ".modalWindow-container": {
+                "display": "table-cell",
+                "vertical-align": "middle"
+              },
+              ".modalWindow-video": {
+                "height": "calc(80vw / 1.778)",
+                "width": "80vw",
+                "margin": "0 auto"
+              }
+            },
+            "a.close": {
+              "position": "absolute",
+              "right": "4vw",
+              "top": "4vh",
+              "color": "#ffffff",
+              "z-index": "5000000",
+              "font-size": "37px",
+              "background": "#000",
+              "padding": "20px",
+              "border-radius": "50%",
+              "&:hover": {
+                "color": "#ffffff"
+              }
+            }
+          },
+          "_name": "header3",
+          "_customHTML": "<section class=\"header3\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" plugins=\"PlayerVimeo\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"checkbox\" title=\"Show Arrow\" name=\"showArrow\" condition=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n         \n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Video PopUp\" name=\"showVideoPopUp\">\n        <input type=\"text\" title=\"Modal Video\" name=\"modalVideo\" value=\"https://www.youtube.com/watch?v=l8UXhtqV6hU\" condition=\"showVideoPopUp\">\n        <input type=\"checkbox\" title=\"Show Description\" name=\"showDescription\" condition=\"showVideoPopUp\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" value=\"../_images/background1.jpg\" title=\"Background Image\" selected parallax>\n            <input type=\"color\" value=\"#510938\" title=\"Background Color\">\n            <input type=\"video\" value=\"https://www.youtube.com/watch?v=l8UXhtqV6hU\" title=\"Background Video\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"rgb(7, 9, 21)\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container align-center\">\n        <div class=\"row justify-content-md-center\">\n            <div class=\"mbr-white col-md-8\">\n                <div class=\"mbr-media show-modal align-center \" mbr-if=\"showVideoPopUp\" data-modal=\".modalWindow\">\n                    <span mbr-icon class=\"mbri-play mbr-iconfont socicon\"></span>\n                </div>\n                <div mbr-text class=\"icon-description align-center font-italic  mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showDescription && showVideoPopUp\" data-app-selector=\".icon-description, .mbr-media\">\n                    Watch video\n                </div>\n                \n                <h1 class=\"mbr-section-title align-center mbr-white my-4 mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">HELPING FAMILIES SINCE 1989<div>THE SMART CHOICE FOR DIVORCE AND FAMILY LAW</div><div>IN THE TWIN CITIES MINNESOTA</div></h1>\n                <p class=\"mbr-text align-center py-2 mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                        TRUSTED FAMILY LAW COUNSEL FOR 30 YEARS\n                </p>\n               \n                <div class=\"mbr-section-btn\" mbr-buttons mbr-theme-style=\"display-4\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n                     <a class=\"btn btn-md btn-white\" href=\"https://mobirise.com\">MORE</a>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div mbr-if=\"showVideoPopUp\">\n        <div class=\"modalWindow\" style=\"display: none;\">\n            <div class=\"modalWindow-container\">\n                <div class=\"modalWindow-video-container\">\n                    <div class=\"modalWindow-video\">\n                        <iframe width=\"100%\" height=\"100%\" data-src=\"{{modalVideo}}\" frameborder=\"0\" allowfullscreen=\"1\"></iframe>\n                    </div>\n                    <a class=\"close\" role=\"button\" data-dismiss=\"modal\">\n                        <span aria-hidden=\"true\" class=\"mbri-close mbr-iconfont closeModal\"></span>\n                        <span class=\"sr-only\">Close</span>\n                    </a>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div mbr-if=\"showArrow\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n        <a href=\"#next\">\n            <i class=\"mbri-arrow-down mbr-iconfont\"></i>\n        </a>\n    </div>\n</section>",
+          "_cid": "ryFLq9mNo6",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "header3-d"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            ".google-map": {
+              "height": "25rem",
+              "position": "relative",
+              "iframe": {
+                "height": "100%",
+                "width": "100%"
+              },
+              "[data-state-details]": {
+                "color": "#6b6763",
+                "font-family": "Montserrat",
+                "height": "1.5em",
+                "margin-top": "-0.75em",
+                "padding-left": "1.25rem",
+                "padding-right": "1.25rem",
+                "position": "absolute",
+                "text-align": "center",
+                "top": "50%",
+                "width": "100%"
+              },
+              "&[data-state]": {
+                "background": "#e9e5dc"
+              },
+              "&[data-state=\"loading\"]": {
+                "[data-state-details]": {
+                  "display": "none"
+                },
+                "&::after": {}
+              },
+              "& when (@gray)": {
+                "-webkit-filter": "grayscale(100%)",
+                "-moz-filter": "grayscale(100%)",
+                "-ms-filter": "grayscale(100%)",
+                "-o-filter": "grayscale(100%)",
+                "filter": "gray"
+              }
+            }
+          },
+          "_name": "map1",
+          "_customHTML": "<section class=\"map1\" group=\"Maps\">\n    <mbr-parameters>   \n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"map\" title=\"Map\" name=\"googleMap\">\n        <input type=\"checkbox\" title=\"Gray Filter\" name=\"gray\" checked=\"\">   \n    <!-- End block parameters -->\n    </mbr-parameters> \n    <div class=\"google-map\" mbr-map=\"googleMap\">\n    </div>\n</section>",
+          "_cid": "ryEYGddmY6",
+          "_anchor": "map1-9",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".title": {
+              "margin-bottom": "2rem"
+            },
+            "a:not([href]):not([tabindex])": {
+              "color": "#fff",
+              "border-radius": "3px"
+            },
+            "a.btn-white:not([href]):not([tabindex])": {
+              "color": "#333"
+            },
+            ".form-group": {
+              "-webkit-flex-grow": "1",
+              "flex-grow": "1",
+              "max-width": "100%"
+            },
+            ".input-group-btn": {
+              "display": "block"
+            },
+            "h2": {
+              "color": "#333",
+              "letter-spacing": "0.1em",
+              "margin-bottom": "2rem"
+            },
+            "h3": {
+              "color": "#767676",
+              "letter-spacing": "0.03em",
+              "line-height": "1.8",
+              "margin-bottom": "2rem"
+            },
+            ".form-control": {
+              "border-radius": "0px",
+              "padding-left": "15px"
+            },
+            "textarea.form-control": {
+              "min-height": "154px"
+            },
+            "@media (max-width: 991px)": {
+              "h2": {
+                "text-align": "center"
+              },
+              "h3": {
+                "text-align": "center"
+              },
+              ".input-group-btn": {
+                "text-align": "center"
+              }
+            },
+            "H3": {
+              "color": "#000000"
+            }
+          },
+          "_name": "form3",
+          "_customHTML": "<section class=\"mbr-section form3\" group=\"Forms\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"6\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/img/06.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#efefef\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=l8UXhtqV6hU\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.2\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n         \n            <div mbr-form class=\"media-container-column col-lg-6 col-md-10 col-sm-12 align-center\">\n                <!---Formbuilder Form--->\n                <form action name=\"Mobirise Form\" method=\"POST\" class=\"mbr-form form-with-styler\">\n                    <div class=\"form-row\">\n                        <div hidden=\"hidden\" data-form-alert class=\"alert alert-success col-12\">Thanks for filling out the form!</div>\n                        <div hidden=\"hidden\" data-form-alert-danger class=\"alert alert-danger col-12\"></div>\n                    </div>\n                    <div class=\"dragArea form-row\">\n                        <div class=\"col-md-12\">\n                            <h2 mbr-theme-style=\"display-2\" class=\"mbr-fonts-style mbr-fonts-style mbr-fonts-style mbr-section-title mbr-fonts-style mbr-bold\">CONTACT US</h2>\n                        </div>\n                        <div class=\"col-md-12\">\n                            <h3 mbr-theme-style=\"display-7\" class=\"mbr-fonts-style mbr-fonts-style mbr-fonts-style mbr-section-subtitle mbr-fonts-style\">Obtaining the guidance of a Twin Cities divorce lawyer can make all the difference in the outcome of your case. The laws governing family issues can be difficult to navigate, and you should never have to face the Minnesota family courts alone.&nbsp;<br><b>GET A FREE ONE HOUR CONSULTATION</b></h3>\n                        </div>\n                        <div data-for=\"name\" class=\"col-md-12 form-group\">\n                            <input type=\"text\" name=\"name\" placeholder=\"You Name\" data-form-field=\"Name\" mbr-theme-style=\"display-7\" class=\"form-control\" required=\"required\">\n                        </div>\n                        <div data-for=\"email\" class=\"col-md-12 form-group\">\n                            <input type=\"email\" name=\"email\" placeholder=\"You Email\" data-form-field=\"Email\" mbr-theme-style=\"display-7\" class=\"form-control\" required=\"required\">\n                        </div>\n                        <div data-for=\"phone\" class=\"col-md-12 form-group\">\n                            <input type=\"tel\" name=\"phone\" placeholder=\"You Phone\" data-form-field=\"Phone\" mbr-theme-style=\"display-7\" class=\"form-control\">\n                        </div>\n                        <div data-for=\"message\" class=\"col-md-12 form-group\">\n                            <textarea type=\"textarea\" name=\"message\" placeholder=\"Message\" data-form-field=\"Message\" mbr-theme-style=\"display-7\" class=\"form-control\"></textarea>\n                        </div>\n                        <div class=\"col-md-12 input-group-btn\" mbr-buttons=\"true\" mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove,-mbrBtnLink,-mbrBtnAdd\">\n                            <a type=\"submit\" class=\"btn btn-form btn-black\">SEND</a>\n                        </div>\n                    </div>\n                </form><!---Formbuilder Form--->\n            </div>\n        </div>\n    </div>      \n</section>",
+          "_cid": "ryEYI8qWhl",
+          "_anchor": "form3-a",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".mbr-text": {
+              "color": "#444",
+              "letter-spacing": "0.1em"
+            },
+            ".social-list": {
+              "display": "flex",
+              "padding-left": "0",
+              "margin-bottom": "0",
+              "list-style": "none",
+              "-webkit-flex-wrap": "wrap",
+              "flex-wrap": "wrap",
+              "-webkit-justify-content": "flex-end",
+              "justify-content": "flex-end",
+              ".mbr-iconfont-social": {
+                "font-size": "1.1rem",
+                "color": "black"
+              },
+              ".soc-item": {
+                "margin": "0 .5rem"
+              },
+              "a": {
+                "margin": "0",
+                "-webkit-transition": ".2s linear",
+                "transition": ".2s linear",
+                "&:hover": {
+                  "opacity": ".4"
+                }
+              },
+              "@media (max-width: 991px)": {
+                "-webkit-justify-content": "center",
+                "justify-content": "center"
+              }
+            },
+            ".media-container-row > div": {
+              "padding": "0px"
+            },
+            "@media (max-width: 991px)": {
+              ".mbr-text": {
+                "text-align": "center !important",
+                "padding-bottom": "1.5rem"
+              }
+            }
+          },
+          "_name": "footer1",
+          "_customHTML": "<section group=\"Footers\" mbr-class=\"{'mbr-reveal': reveal, 'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n        <select title=\"Icons\" name=\"iconsCount\">\n            <option value=\"0\">0</option>\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\" selected=\"\">4</option>\n            <option value=\"5\">5</option>\n            <option value=\"6\">6</option>\n        </select>\n        <fieldset type=\"background\" name=\"bg\" parallax=\"\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/img/01.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected=\"\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked=\"\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#3C3C3C\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n        <input type=\"range\" inline=\"\" title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay &amp;&amp; bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container\">\n        <div class=\"row\">\n            <div mbr-class=\"{ 'col-lg-6': iconsCount == 0, 'col-lg-4': iconsCount > 0}\" class=\"col-md-12 text1\">\n                <p class=\"mbr-text mbr-bold links mbr-fonts-style align-left\" mbr-theme-style=\"display-7\" data-app-selector=\".links\"> POWERED BY \n                    <a href=\"#\" class=\"text-black\">MOBIRISE.COM</a>\n                </p>\n            </div>\n            <div mbr-class=\"{ 'col-lg-6': iconsCount == 0, 'col-lg-4': iconsCount > 0}\" class=\"col-md-12 copyright align-right text2\">\n                <p class=\"mbr-text mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".copyright > p\">\n                    LAWYERM4 THEME\n                </p>\n            </div>\n            <div class=\"col-lg-4 col-md-12\">\n                <div class=\"social-list \" mbr-if=\"iconsCount > 0\">\n                    <div class=\"soc-item\" mbr-if=\"iconsCount > 0\">\n                        <a href=\"https://twitter.com/mobirise\" target=\"_blank\">\n                            <span mbr-icon=\"\" class=\"socicon-twitter socicon mbr-iconfont mbr-iconfont-social\"></span>\n                        </a>\n                    </div>\n                    <div class=\"soc-item\" mbr-if=\"iconsCount>1\">\n                        <a href=\"https://www.facebook.com/pages/Mobirise/1616226671953247\" target=\"_blank\">\n                            <span mbr-icon=\"\" class=\"socicon-facebook socicon mbr-iconfont mbr-iconfont-social\"></span>\n                        </a>\n                    </div>\n                    <div class=\"soc-item\" mbr-if=\"iconsCount>2\">\n                        <a href=\"https://plus.google.com/u/0/+Mobirise\" target=\"_blank\">\n                            <span mbr-icon=\"\" class=\"socicon-googleplus socicon mbr-iconfont mbr-iconfont-social\"></span>\n                        </a>\n                    </div>\n                    <div class=\"soc-item\" mbr-if=\"iconsCount>3\">\n                        <a href=\"https://instagram.com/mobirise\" target=\"_blank\">\n                            <span mbr-icon=\"\" class=\"socicon-instagram socicon mbr-iconfont mbr-iconfont-social\"></span>\n                        </a>\n                    </div>\n                     <div class=\"soc-item\" mbr-if=\"iconsCount>4\">\n                        <a href=\"https://instagram.com/mobirise\" target=\"_blank\">\n                            <span mbr-icon=\"\" class=\"socicon-instagram socicon mbr-iconfont mbr-iconfont-social\"></span>\n                        </a>\n                    </div>\n                     <div class=\"soc-item\" mbr-if=\"iconsCount>5\">\n                        <a href=\"https://instagram.com/mobirise\" target=\"_blank\">\n                            <span mbr-icon=\"\" class=\"socicon-instagram socicon mbr-iconfont mbr-iconfont-social\"></span>\n                        </a>\n                    </div>\n                </div>\n            </div>    \n        </div>\n    </div>\n</section>",
+          "_cid": "ryEYLNXNxj",
+          "_anchor": "footer1-b",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
